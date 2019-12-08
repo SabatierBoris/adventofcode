@@ -10,7 +10,8 @@ def execute(wire_1, wire_2):
     path_2 = process_wire(wire_2)
 
     common_points = (set(path_1) & set(path_2)) - set([start_point])
-    return min([p.manhattan_distance(start_point) for p in common_points])
+
+    return min([path_1.index(p) + path_2.index(p) for p in common_points])
 
 
 def main():

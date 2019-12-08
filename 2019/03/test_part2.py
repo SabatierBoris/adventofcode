@@ -3,18 +3,18 @@
 import unittest
 from collections import namedtuple
 
-from part1 import execute
+from part2 import execute
 
 
 class TestMain(unittest.TestCase):
     def test_global(self):
         TestCase = namedtuple("TestCase", ["wire_1", "wire_2", "result"])
         test_cases = [
-            TestCase(["R8", "U5", "L5", "D3"], ["U7", "R6", "D4", "L4"], 6,),
+            TestCase(["R8", "U5", "L5", "D3"], ["U7", "R6", "D4", "L4"], 30,),
             TestCase(
                 ["R75", "D30", "R83", "U83", "L12", "D49", "R71", "U7", "L72"],
                 ["U62", "R66", "U55", "R34", "D71", "R55", "D58", "R83"],
-                159,
+                610,
             ),
             TestCase(
                 [
@@ -31,7 +31,7 @@ class TestMain(unittest.TestCase):
                     "R51",
                 ],
                 ["U98", "R91", "D20", "R16", "D67", "R40", "U7", "R15", "U6", "R7"],
-                135,
+                410,
             ),
         ]
 
