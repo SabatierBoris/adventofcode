@@ -1,0 +1,5 @@
+.coverage
+Pipfile
+__pycache__/
+htmlcov/
+input
