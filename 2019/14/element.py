@@ -32,3 +32,11 @@ class Element:
 
     def producted_by(self):
         return self.__producted_by
+
+    def can_product_with(self, stock):
+        for element, qty in self.producted_by().items():
+            if element not in stock:
+                return False
+            if stock[element] < qty:
+                return False
+        return True
